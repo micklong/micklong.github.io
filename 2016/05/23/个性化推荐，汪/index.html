@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>个性化推荐,汪 | mcklong的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="回想起来，接触大数据也快半年时间了。回想这半年来，一步步摸着石头过河，没有人带路，中间走过了很多弯路，同时也干过很多累活。一入数据深似海，从此准点下班是路人。
+我这几个月来一直来思索，大数据的价值到底是什么。前期的大数据做的不是特别满意。大数据本身就是一个十分枯燥的事情，数据是冰冷的，也许分析几天，也得不到一个很有价值的结论，或者得到的结论是一个非常显然的结论。我发现大数据产品经理的这个岗位其实是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个性化推荐,汪">
+<meta property="og:url" content="http://pmdog.me/2016/05/23/个性化推荐，汪/index.html">
+<meta property="og:site_name" content="mcklong的博客">
+<meta property="og:description" content="回想起来，接触大数据也快半年时间了。回想这半年来，一步步摸着石头过河，没有人带路，中间走过了很多弯路，同时也干过很多累活。一入数据深似海，从此准点下班是路人。
+我这几个月来一直来思索，大数据的价值到底是什么。前期的大数据做的不是特别满意。大数据本身就是一个十分枯燥的事情，数据是冰冷的，也许分析几天，也得不到一个很有价值的结论，或者得到的结论是一个非常显然的结论。我发现大数据产品经理的这个岗位其实是">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/jrtt_01.png">
+<meta property="og:updated_time" content="2016-07-26T13:00:05.538Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个性化推荐,汪">
+<meta name="twitter:description" content="回想起来，接触大数据也快半年时间了。回想这半年来，一步步摸着石头过河，没有人带路，中间走过了很多弯路，同时也干过很多累活。一入数据深似海，从此准点下班是路人。
+我这几个月来一直来思索，大数据的价值到底是什么。前期的大数据做的不是特别满意。大数据本身就是一个十分枯燥的事情，数据是冰冷的，也许分析几天，也得不到一个很有价值的结论，或者得到的结论是一个非常显然的结论。我发现大数据产品经理的这个岗位其实是">
+  
+    <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d9de220e2ccd67bd25be8bfb464f8e73";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  
+  
+  <script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">游龙</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/产品">产品</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/共享经济/" style="font-size: 10px;">共享经济</a> <a href="/tags/大数据/" style="font-size: 12.5px;">大数据</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/行为学/" style="font-size: 10px;">行为学</a> <a href="/tags/阅读/" style="font-size: 12.5px;">阅读</a> <a href="/tags/随笔/" style="font-size: 17.5px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">家穷人丑，一米六九，屌丝一枚，逆袭可否</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">游龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">游龙</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/产品">产品</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-个性化推荐，汪" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/23/个性化推荐，汪/" class="article-date">
+  	<time datetime="2016-05-23T07:54:03.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    </div>
+  
+  
+   
+    <div class="article-view">
+  <span id="busuanzi_container_page_pv">
+  阅读 <span id="busuanzi_value_page_pv"></span>
+</span>
+  </div>
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      个性化推荐,汪
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>回想起来，接触大数据也快半年时间了。回想这半年来，一步步摸着石头过河，没有人带路，中间走过了很多弯路，同时也干过很多累活。一入数据深似海，从此准点下班是路人。</p>
+<p>我这几个月来一直来思索，大数据的价值到底是什么。前期的大数据做的不是特别满意。大数据本身就是一个十分枯燥的事情，数据是冰冷的，也许分析几天，也得不到一个很有价值的结论，或者得到的结论是一个非常显然的结论。我发现大数据产品经理的这个岗位其实是一个综合素质要求非常高的职业。这需要我们对数据有足够的兴趣，能沉下心来钻研和琢磨，同时要具备计算机的基本知识，不会你会发现你和技术部的同事沟通起来会有很大困难。另外一个也是，也是很重要的，需要懂业务，因为大数据的最终还是服务于业务，如果我们的业务知识不够牢固，就很难结合我们的业务，发挥大数据的真正的价值。</p>
+<a id="more"></a>
+<p>大数据的价值到底是什么，除了我们经常是说的，用数据驱动版本的，迭代优化，它是否还有其他的应用价值呢。当我在使用内容型的app，我渐渐发现这是一个分久必合，合久必分的趋势。就拿新闻来说，前几年我们一直追求新闻的及时性，第一时间掌握各大新闻资讯成为吸引用户的第一要素，那时候的app就是为了更好地解决信息不对称的问题。而现在这已经不是新闻中最主要的解决的问题了，信息的爆炸式增长成为用户获取有用信息的最大阻碍，人们需要花费大量的时间来筛选自己想要的信息。在这样的情况下，各大新闻媒体，开始尝试了个性化推荐，从资源的整合逐步向分发过渡。</p>
+<p><img src="http://7xltqk.com1.z0.glb.clouddn.com/jrtt_01.png" alt="个性化推荐趋势"></p>
+<p>我是一个今日头条的深度用户，被它的推荐技术所折服。首先我觉得它的起步比较早，12年的时候就开始着手大数据推荐相关的东西，要知道那时候的市场还没那么成熟，而且新闻市场有着很多强者，网易新闻就是一个代表，积累了一大波忠实粉丝。就目前来看，今日头条的大数据主要是利用了协同推荐和基于内容的推荐的方式，通过给用户和新闻打标签的形式来做个性化推荐。当我深入去理解这种推荐的时候，我发现行业这块都有两个通病：</p>
+<h3 id="1-马太效应。">1.马太效应。</h3><blockquote>
+<p>发现越热门的新闻会一直热门，被冷藏的新闻一直被冷藏。这也就导致我们的浏览的东西会越来越狭隘，无法保证推荐的多样性。</p>
+</blockquote>
+<h3 id="2-越俗越喜欢">2.越俗越喜欢</h3><blockquote>
+<p>对于新闻这块，色情的内容，点击率和热度一定会高于其他的，也不乏一些标题党会造成新闻的评分很高，热度很高的情况。</p>
+</blockquote>
+<p>我相信这两个问题他们都在逐步改善，刚开始他们也遇到冷启动的问题，他们很好地利用微博的社交关系，解决了这一问题。还有他们也从中进行了一些人工干预，今天发生的新闻就是一个最大的例子，新闻这块需要新颖性，这就要求推荐的东西必须包含一些新鲜的东西。</p>
+<p>借鉴了新闻行业，音乐行业的例子，我在思考，对于教育行业是否也能更好地利用个性化推荐。给用户推荐与自己薄弱点相关的试题、视频、教辅，满足用户个性化学习的需要。因为这里面涉及了业务的思考，我在这里就不多去描述。我开始意识到大数据有很多的价值值得去应用，值得我们去思考和挖掘。我把这个想法告诉了老大，老大同意这么去弄了，这也算是我通过自己努力，获得了这个项目的机会。我也意识到，个性化推荐这块只是刚刚项目成立，接下来会有很多坑等着我去踩，等着我趟。部门之前是没有大数据产品经理这个岗位的，很多东西都需要我们去摸索，不断尝试。在大学本身学的就是智能专业，发现之前好多东西都可以用在大数据上，我发现这块及时很有趣的，可以把自己很多想法去实现，不管前面有多少荆棘，都要去尝试尝试，我坚信，大数据现在做不好的，未来一定能解决好，只不过是时间的问题而已。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/08/共享经济的二三事/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          共享经济的二三事
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/07/个性化推荐评测指标/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">个性化推荐评测指标</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="个性化推荐，汪" data-title="个性化推荐,汪" data-url="http://pmdog.me/2016/05/23/个性化推荐，汪/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"micklong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 游龙
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>大数据驱动产品的阶段性思考与总结 | mcklong的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="从一开始做大数据距离现在已经三个月了，经过这段时间的探索，中间有一些成果的输出，但是期间更多的是一种探索，这里面有很多东西值得我们去思考和改进。中间走了一些弯路，现在把这些弯路记录下来，以便下次不会重走老路。这些路上的“坑”中主要有以下三点：
+ （1）分析的目的性不强，分析大量的数据，却得不到有价值的信息。
+
+很多时候，分析数据前期，没有想清楚目的是什么，就盲目下手分析，到最终得到一个现象，而不是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数据驱动产品的阶段性思考与总结">
+<meta property="og:url" content="http://pmdog.me/2016/02/25/大数据驱动产品的阶段性思考与总结/index.html">
+<meta property="og:site_name" content="mcklong的博客">
+<meta property="og:description" content="从一开始做大数据距离现在已经三个月了，经过这段时间的探索，中间有一些成果的输出，但是期间更多的是一种探索，这里面有很多东西值得我们去思考和改进。中间走了一些弯路，现在把这些弯路记录下来，以便下次不会重走老路。这些路上的“坑”中主要有以下三点：
+ （1）分析的目的性不强，分析大量的数据，却得不到有价值的信息。
+
+很多时候，分析数据前期，没有想清楚目的是什么，就盲目下手分析，到最终得到一个现象，而不是">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_plan.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_wd.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_xes.png">
+<meta property="og:updated_time" content="2016-03-19T07:32:32.461Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大数据驱动产品的阶段性思考与总结">
+<meta name="twitter:description" content="从一开始做大数据距离现在已经三个月了，经过这段时间的探索，中间有一些成果的输出，但是期间更多的是一种探索，这里面有很多东西值得我们去思考和改进。中间走了一些弯路，现在把这些弯路记录下来，以便下次不会重走老路。这些路上的“坑”中主要有以下三点：
+ （1）分析的目的性不强，分析大量的数据，却得不到有价值的信息。
+
+很多时候，分析数据前期，没有想清楚目的是什么，就盲目下手分析，到最终得到一个现象，而不是">
+  
+    <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d9de220e2ccd67bd25be8bfb464f8e73";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  
+  
+  <script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">游龙</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/产品">产品</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/共享经济/" style="font-size: 10px;">共享经济</a> <a href="/tags/大数据/" style="font-size: 12.5px;">大数据</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/行为学/" style="font-size: 10px;">行为学</a> <a href="/tags/阅读/" style="font-size: 12.5px;">阅读</a> <a href="/tags/随笔/" style="font-size: 17.5px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">家穷人丑，一米六九，屌丝一枚，逆袭可否</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">游龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">游龙</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/产品">产品</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-大数据驱动产品的阶段性思考与总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/25/大数据驱动产品的阶段性思考与总结/" class="article-date">
+  	<time datetime="2016-02-25T07:54:03.000Z" itemprop="datePublished">2016-02-25</time>
+</a>
+    </div>
+  
+  
+   
+    <div class="article-view">
+  <span id="busuanzi_container_page_pv">
+  阅读 <span id="busuanzi_value_page_pv"></span>
+</span>
+  </div>
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      大数据驱动产品的阶段性思考与总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>从一开始做大数据距离现在已经三个月了，经过这段时间的探索，中间有一些成果的输出，但是期间更多的是一种探索，这里面有很多东西值得我们去思考和改进。中间走了一些弯路，现在把这些弯路记录下来，以便下次不会重走老路。这些路上的“坑”中主要有以下三点：</p>
+<p><strong> （1）分析的目的性不强，分析大量的数据，却得不到有价值的信息。</strong></p>
+<blockquote>
+<p>很多时候，分析数据前期，没有想清楚目的是什么，就盲目下手分析，到最终得到一个现象，而不是结论，然后在结论的背后抛出一堆的原因猜测，这让我们的很多分析会戛然而止，没有挖掘到深层次有价值的数据。在分析XXXXXX内容时，发现可以分析的数据很多，有人均使用时长，评分，在学人数，在学率等等指标，然后就盲目去下手分析，结果只是验证了一个显然的结论——“新拍的视频课程比老的视频课程好”。这样的分析花了很多时间，从各个维度分析却只是得到一个很显然的结论，这无疑走了不少的弯路。学会挖掘数据中的有价值的数据，这可能是我们今后大数据的重中之重。如果只是在大量的数据中作分析，工作量大，而却很难挖掘到有价值的数据，最终的可能就是大海捞针。我们的数据分析针对性和目的性更强一些，这样可以减少我们很多工作量。<br><a id="more"></a></p>
+</blockquote>
+<p><strong> （2）前期需要花费大量的时间来确定数据的正确性。</strong></p>
+<blockquote>
+<p>这个问题看似不是问题，确是我们在分析数据最为头疼的问题。因为数据的不确定性，可能得出的结论会是错误的结论。一次在XXXXXX的各学段的学习时长时，发现圣诞节前夜和圣诞节的使用时长明显偏低，只有平时的四分之一左右，从主观上，刚开始验证是节假日的原因，但是圣诞节根部就不放假，这就很让人疑惑。结果一查证，是那两天的数据没有上报，结果所有的数据又得重新导。还有一次，在分析XXX时，在统计英语的播放人数占活跃人数占比时，一个是系统采集的，一个是人工埋点，结果发现两个数据产生了很大的差异，为了验证这两个数据更合理，才发现了一个大“坑”，并不是所有人都使用了有埋点的版本，如果不去验证，可能永远也得不到正确的结果，这对产品的指导可能是致命的错误。还有我们的产品无论是产品人员，还是开发人员都进行了好几轮的轮换，大家都不清楚之前的程序中埋了哪些点，什么版本埋的，这是非常致命的，如果一不小心，可能会导致我们的分析得到错误的结论。另外我们和互联网技术人员的沟通也不够，在导数据时，对方不知道我们的目的，导致导出来的数据与想分析的数据存在一定的偏差，需要花很长时间进行确认。</p>
+</blockquote>
+<p><strong> （3）数据选取指标不合理，无法反应数据的实际情况。</strong></p>
+<blockquote>
+<p>由于产品的用户的差异性，科目的差异性，用户在表现出来的差异性也千差万别，这也就导致我们很难找到一个合适的指标来反应数据的实际情况，数据之间的耦合性很强，这就决定我们不能从单一的维度的分析和看待问题。在选取指标反应课程的受欢迎程度时，基于现有的一些指标，最终选择了一个人均周播放时长，这个指标出现后，其实并不合理，存在天然的缺陷，平均下来的时长与实际值相差很大，但为了把所有的课程放在一起，从现有的维度，只能选取这个维度作为一个临时的标准，后期的不得不对这个指标进行进一步优化。</p>
+</blockquote>
+<h3 id="经过一个月的探索，开始慢慢调整做事的节奏，开始制定一些可执行的目标。其中有些方法是可以直接应用到我们的大数据分析中的，后期我们可以改善地方，大数据分析流程如下，可以从以下几个方面入手：">经过一个月的探索，开始慢慢调整做事的节奏，开始制定一些可执行的目标。其中有些方法是可以直接应用到我们的大数据分析中的，后期我们可以改善地方，大数据分析流程如下，可以从以下几个方面入手：</h3><p> <img src="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_plan.png" alt="大数据分析流程"></p>
+<p><strong> （1）以目标为导向，“反证法”思维 </strong></p>
+<blockquote>
+<p>前期的大量的数据分析，却没有收到很好的效果，这导致我们大部分时间没有产出。归根到底，就是目标导向不强。我们在分析数据时，很多时候是出于业务需要去分析的，更确切地说是被动接受的，各个app都希望从平台上的数据中，能找出一些有用的数据或者说是有价值的数据。这样的出发点，本身是而没有问题，问题是出在我们做事情的方法。我们预先没有对分析的数据结果做预判，应该多问几个“如果结果是A或者B”，是否能帮助我们产品改进，如果结果仅仅只是一个现象，那么它分析的价值就大大折扣，就没有必要花大量的时间在这样的数据分析上。在分析数据时，应该是数学上的“反证法”思维，为了验证结论的正确性，而针对性地导数据分析，这样在很大程度上保证我们的分析的数据时有价值的。</p>
+</blockquote>
+<p><strong> （2）维度的确认以及指标的拆分 </strong></p>
+<blockquote>
+<p>大数据一般都会分为三个过程：数据采集、数据建模、数据分析。其实最难的也就是在数据建模的这个过程，如果把模型建好至关重要。在尝试中，我觉得建模中最重要的两个步骤：产品分析维度和数据指标。具体的关系如下图所示，数据指标是建立在产品的分析维度上的。<br> <img src="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_wd.png" alt="大数据分析维度"></p>
+</blockquote>
+<blockquote>
+<p>只有选取的维度正确了，才能保证数据的有效性，简而言之，我们选取的维度能从某些方面反馈出产品的问题。在做XXXXXX的课程评价时，就涉及到了这个概念。首先评价一个课程包，得从两个维度进行考虑，一个是需求程度，一个受欢迎程度。需求程度下面又会几个对应的数据指标：报班人数、累计在学人数、活跃在学人数、活跃人数在学率等。受欢迎程度下有四个对应的数据指标：人均播放时长、人均周播放时长、人均月播放时长、课程评分。通过这些指标来反映出课程包的不同方面的问题，但总体来说，这从一定程度上，也是产品的活跃用户，人均使用时长来拆解的。产品的活跃用户也可以进一步进行拆分，可以拆分为持续活跃用户、新增用户、新增用户的流失、老用户的流失。通过观察这些指标，针对性的做一些调整。在用户的使用行为上，又可以根据用户的使用路径，建立对应的漏斗分析模型，然后根据这些漏斗分析模型，找出可优化的产品功能点,以学而思为例。<br> <img src="http://7xltqk.com1.z0.glb.clouddn.com/bigdata_xes.png" alt="学而思"></p>
+</blockquote>
+<p><strong> （3）数据可视化 </strong></p>
+<blockquote>
+<p>当我们把维度定好，指标拆分好之后，就可以这些数据进行可视化。我们在前期的分析数据过程中，因为各种维度和指标都没有规划清楚，所以对数据可视化的呈现基本没有。对于一些常用的数据分析指标，我们应该在数据平台上做展示，这样可以在很大程度上减少我们的工作量。在呈现指标时，我们还应该考虑指标下的不同属性，例如，学段、科目、班级类别、时间的属性。这样我们在阅读数据时，就可以针对性做一些分析，将大问题进行细分，从而更好地找到答案。数据可视化的好处是可以减少重复性工作，同时也能及时发现和找出产品和内容上存在的问题。目前我们的大部分的工作还是停留在导数据，分析数据，PPT展示的一个流程中，要不断去分析更新后的数据。随着需求和指标的不断增加，我们得思考怎样去优化我们的分析流程，从而更好地提高工作效率。</p>
+</blockquote>
+<p><strong> 最后，经过这段时间的尝试，在大数据的理解方面有一些加强，但是还是处在入门级别上，或者根本没有达到入门级别。现在大数据的很多的指标的也只是一个相对比较合理的值，随着时间的推移，我们现在的设定的一些评价指标，也会不太合理，慢慢被淘汰，需要我们在建模过程中不断去优化，不断去尝试。我们现在的大部分工作还是在分析当中，实际的产出太少，来帮助和指导我们的产品和内容，应该说现在挖掘到的数据有用的价值信息太少，这也是值得我们不断去实践和学习。我们应该形成我们独特的一套工作流程，来规范我们的分析工作，这可能是我们近期需要不断努力和尝试的。</strong></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/16/hexo在coding上绑定域名/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          hexo在coding上绑定域名
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/29/微信朋友圈照片模糊的几点思考/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信朋友圈照片模糊的几点思考</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="大数据驱动产品的阶段性思考与总结" data-title="大数据驱动产品的阶段性思考与总结" data-url="http://pmdog.me/2016/02/25/大数据驱动产品的阶段性思考与总结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"micklong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 游龙
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

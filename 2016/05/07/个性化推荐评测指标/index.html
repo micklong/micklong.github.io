@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>个性化推荐评测指标 | mcklong的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近在读项亮的《推荐系统实践》，里面很多方法论还是直接借鉴的，对于我们思考问题还是很有帮助的。
+1.用户满意度
+这个是个性化推荐最重要的评测指标，但是用户满意度没有办法离线计算，只能通过用户调查或者在线实验获得。比如说，一个论文推荐系统的调查问卷：（1）推荐的论文都是我想看的；（2）推荐的论文我都看过了，确实是符合我兴趣的不错的论文；（3）推荐的论文和我的研究兴趣是相关的，但我并不喜欢；（4）不知">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个性化推荐评测指标">
+<meta property="og:url" content="http://pmdog.me/2016/05/07/个性化推荐评测指标/index.html">
+<meta property="og:site_name" content="mcklong的博客">
+<meta property="og:description" content="最近在读项亮的《推荐系统实践》，里面很多方法论还是直接借鉴的，对于我们思考问题还是很有帮助的。
+1.用户满意度
+这个是个性化推荐最重要的评测指标，但是用户满意度没有办法离线计算，只能通过用户调查或者在线实验获得。比如说，一个论文推荐系统的调查问卷：（1）推荐的论文都是我想看的；（2）推荐的论文我都看过了，确实是符合我兴趣的不错的论文；（3）推荐的论文和我的研究兴趣是相关的，但我并不喜欢；（4）不知">
+<meta property="og:updated_time" content="2016-07-23T03:06:24.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个性化推荐评测指标">
+<meta name="twitter:description" content="最近在读项亮的《推荐系统实践》，里面很多方法论还是直接借鉴的，对于我们思考问题还是很有帮助的。
+1.用户满意度
+这个是个性化推荐最重要的评测指标，但是用户满意度没有办法离线计算，只能通过用户调查或者在线实验获得。比如说，一个论文推荐系统的调查问卷：（1）推荐的论文都是我想看的；（2）推荐的论文我都看过了，确实是符合我兴趣的不错的论文；（3）推荐的论文和我的研究兴趣是相关的，但我并不喜欢；（4）不知">
+  
+    <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d9de220e2ccd67bd25be8bfb464f8e73";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  
+  
+  <script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">游龙</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/产品">产品</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/共享经济/" style="font-size: 10px;">共享经济</a> <a href="/tags/大数据/" style="font-size: 12.5px;">大数据</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/行为学/" style="font-size: 10px;">行为学</a> <a href="/tags/阅读/" style="font-size: 12.5px;">阅读</a> <a href="/tags/随笔/" style="font-size: 17.5px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">家穷人丑，一米六九，屌丝一枚，逆袭可否</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">游龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">游龙</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/产品">产品</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-个性化推荐评测指标" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/07/个性化推荐评测指标/" class="article-date">
+  	<time datetime="2016-05-07T07:54:03.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    </div>
+  
+  
+   
+    <div class="article-view">
+  <span id="busuanzi_container_page_pv">
+  阅读 <span id="busuanzi_value_page_pv"></span>
+</span>
+  </div>
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      个性化推荐评测指标
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在读项亮的《推荐系统实践》，里面很多方法论还是直接借鉴的，对于我们思考问题还是很有帮助的。</p>
+<h3 id="1-用户满意度">1.用户满意度</h3><blockquote>
+<p>这个是个性化推荐最重要的评测指标，但是用户满意度没有办法离线计算，只能通过用户调查或者在线实验获得。<br>比如说，一个论文推荐系统的调查问卷：<br>（1）推荐的论文都是我想看的；<br>（2）推荐的论文我都看过了，确实是符合我兴趣的不错的论文；<br>（3）推荐的论文和我的研究兴趣是相关的，但我并不喜欢；<br>（4）不知道为什么会推荐这些论文，它们和我的兴趣没有丝毫的关系。<br>对于电商，我们可以通过点击率、用户停留时长和转化率等指标衡量用户的满意度。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2-预测的准确度">2.预测的准确度</h3><blockquote>
+<p>这个是最重要的推荐系统离线评测指标。将数据集通过时间分成训练集和测试集，通过在训练集上建立用户的行为和兴趣模型预测用户在测试集上的行为，并计算预测行为和测试集上实际行为的重合度作为预测准确度。<br>假设一共有10篇文章，里面4篇是你要找的。根据你某个算法，你认为其中有5篇是你要找的，但是实际上在这5篇里面，只有3篇是真正你要找的。<br>那么你的这个算法的precision是3/5=60%，也就是，你找的这5篇，有3篇是真正对的。<br>这个算法的recall是3/4=75%，也就是，一共有用的这4篇里面，你找到了其中三篇。</p>
+</blockquote>
+<h3 id="3-覆盖率">3.覆盖率</h3><blockquote>
+<p>推荐系统能够推荐出来的物品占总物品集合的比例。以图书推荐为例，出版社可能会关心他们的书有没有被推荐给用户。如果覆盖率达100%，则表明每种图书都有至少推荐给一位用户。推荐系统都有一个非常大的弊病，就是马太效应。就拿今日来说吧，当你观看某一类的资讯或者视频时，那么系统一直会推荐这种的资讯或者视频，热门会更加热门，冷门的一直被雪藏。</p>
+</blockquote>
+<h3 id="4-多样性">4.多样性</h3><blockquote>
+<p>推荐的列表中，满足用户兴趣物品的覆盖度。这里有个麻烦是，如果按正常的理解，我们得了解用户的兴趣度到底是什么，才能评价，但很多时候我们是不知道的用户的兴趣的。多样性还有一个性质，就是它描述是的是推荐列表中，物品中两两之间的不相似性，因此多样性和相似性是相对的。</p>
+</blockquote>
+<h3 id="5-新颖性">5.新颖性</h3><blockquote>
+<p>新颖的推荐是指给用户推荐那些他们之前没有听说过的物品。评测新颖度的最简单方法是利用推荐结果的平均流行度，因为越不热门的物品越可能让用户觉得新颖，要更准确地统计新颖性需要做用户调查。</p>
+</blockquote>
+<h3 id="6-惊喜度">6.惊喜度</h3><blockquote>
+<p>惊喜度和新颖度不能从中文的意思上去解释。如果推荐结果和用户历史兴趣不相似，但却让用户满意，这个就可以认为是惊喜度很高，推荐的新颖性，取决于用户是否听说过这个推荐结果。</p>
+</blockquote>
+<h3 id="7-信任度">7.信任度</h3><blockquote>
+<p>人有信任度，同样系统也有信任度。要提高推荐系统的信任度主要有两种方法。一种是增加系统的透明度，提供推荐解释。一种是考虑用户的社交关系，通过社交关系进行推荐，并且利用好友进行推荐解释。</p>
+</blockquote>
+<h3 id="8-实时性">8.实时性</h3><blockquote>
+<p>对于很多内容型的物品，比如新闻，微博，需要很强的时效性。这得要求系统实时更新用户的推荐列表，这一点今日头条做的很好，这里除了要求埋点的数据及时上报外，还需要超强的计算能力，才能保证用户模型的更新完成。</p>
+</blockquote>
+<h3 id="9-健壮性">9.健壮性</h3><blockquote>
+<p>一个好的推荐系统，比如说搜索引擎，需要保持很好的健壮性，不然并发量一大，就会宕机的。在设计算法时，需要到用户的并发量的迸发的情况。</p>
+</blockquote>
+<h3 id="10-商业价值">10.商业价值</h3><blockquote>
+<p>推荐系统最终是要为业务所服务的，业务的价值就是实现它的商业价值。通过推荐系统能帮助网站的盈利是评价一个推荐系统成功的重要标准。推荐系统并不是算法越好，推荐的结果就能更好。不管黑猫还是白猫，抓到老鼠的猫就是好猫。</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/23/个性化推荐，汪/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          个性化推荐,汪
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/12/微信聊天“撤销”功能的几点思考/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信聊天“撤销”功能的几点思考</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="个性化推荐评测指标" data-title="个性化推荐评测指标" data-url="http://pmdog.me/2016/05/07/个性化推荐评测指标/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"micklong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 游龙
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

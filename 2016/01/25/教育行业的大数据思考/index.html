@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>教育行业的大数据思考 | mcklong的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教育行业的大数据思考">
+<meta property="og:url" content="http://pmdog.me/2016/01/25/教育行业的大数据思考/index.html">
+<meta property="og:site_name" content="mcklong的博客">
+<meta property="og:description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/bigdata.png">
+<meta property="og:updated_time" content="2016-02-02T06:47:43.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="教育行业的大数据思考">
+<meta name="twitter:description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
+  
+    <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d9de220e2ccd67bd25be8bfb464f8e73";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  
+  
+  <script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">游龙</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/产品">产品</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/共享经济/" style="font-size: 10px;">共享经济</a> <a href="/tags/大数据/" style="font-size: 12.5px;">大数据</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/行为学/" style="font-size: 10px;">行为学</a> <a href="/tags/阅读/" style="font-size: 12.5px;">阅读</a> <a href="/tags/随笔/" style="font-size: 17.5px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">家穷人丑，一米六九，屌丝一枚，逆袭可否</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">游龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">游龙</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/产品">产品</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-教育行业的大数据思考" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/25/教育行业的大数据思考/" class="article-date">
+  	<time datetime="2016-01-25T02:54:03.000Z" itemprop="datePublished">2016-01-25</time>
+</a>
+    </div>
+  
+  
+   
+    <div class="article-view">
+  <span id="busuanzi_container_page_pv">
+  阅读 <span id="busuanzi_value_page_pv"></span>
+</span>
+  </div>
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      教育行业的大数据思考
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。</p>
+ <a id="more"></a>
+<p><strong>一、大数据是什么</strong></p>
+<blockquote>
+<p>我理解的大数据指的是基于用户的学习行为产生可以分析的，有价值的数据。用户在我们的产品上产生的数据并不都是有价值的数据，我们需要进行甄别和筛选，找出有意义、有价值的数据，后面用这些数据为我们的业务服务，为决策提供数据支撑。</p>
+</blockquote>
+<p><strong>二、大数据来源</strong></p>
+<p> <img src="http://7xltqk.com1.z0.glb.clouddn.com/bigdata.png" alt="大数据思维导图"></p>
+<p>从猿题库相关的现有的业务来看，用户产生训练数据主要来自以下几个途径：</p>
+<blockquote>
+<ol>
+<li>各APP的埋点情况。在前期每个App都会有自己独立的埋点行为，通过埋点的数据做数据分析。但目前埋点的情况比较分散，各个模块都有自己的规则，可能存在不全的情况，后期需要重点对这一块进行梳理。</li>
+<li>小猿搜题。目前小猿搜题是整个产品产生数据流量的最大入口，每天都会有将近XX的活跃用户数。用户搜索的难题，收藏的题目等等，这些都可以作为大数据的来源，可以很好地收集到用户的薄弱知识点，了解用户现在的学习进度，所学内容。</li>
+<li>猿辅导。猿辅导的内容接下来将成为的重中之重，将成为公司流量变现的主要路口。现在每天大概有XX的用户数据。课程包的点击量，视频的点击量，学习时长，视频课程评价，视频完成率等，这些可以作为评价视频资源，师资好坏的依据。视频之后配套的练习，收集用户的试题训练情况，试题的收藏情况，来判定用户的能力水平。后期可以利用为用户做针对性的课程推送。</li>
+<li>猿题库（包括教师版）。猿题库开展之后，也将会成为用户数据产生的主要入口。用户刷题的练习情况，收藏情况，做错的试题情况，试卷的练习情况等，后期可以考虑根据用户的整个学习训练情况，建立个人的能力模型，最终为用户提供合适的题，合适的视频。</li>
+</ol>
+</blockquote>
+<p><strong>三、大数据能做什么</strong><br> 当我们收集到用户有价值的数据，那么这些数据能为我们提供些什么。如何发挥大数据的价值，也将是大数据工作的重心。大数据的价值主要分为以下几块：</p>
+<blockquote>
+<ol>
+<li>驱动App迭代开发。用户活跃度和使用粘度是决定产品的成败的关键因素。在迭代开发中，以大数据作为支撑，了解目前的整个App的整个现状和使用情况，了解目前app可能存在的一些问题。用数据验证功能的点击率和转化率，为后面的迭代做数据依据。</li>
+<li>改善现有内容质量问题。通过用户的数据，去改善目前内容现有的一些问题。如通过视频课程的点击量和视频学习完成率，判定视频的好坏情况，视频课程是否枯燥乏味。通过大数据结合用户的实际情况，去量化试题难度，让试题难度更加合理，通过用户点击纠错的反馈的内容，暴露出试题的题干解析问题。对于小题库的，整个试题库应该是动态，应该做到“去其糟粕”，把质量差的试题淘汰掉，保证小题库的质量。</li>
+<li>个性化学习推荐。这个应该是大数据最重要的一个目标，虽然离现在有些遥远。通过学生的搜题，刷题的数据，诊断出用户的薄弱知识点，再根据这些薄弱点做针对性的视频学习和试题进行练习巩固，这是与纸质教辅书和课堂无法做到的。基于大数据,可以建立用户的个人能力模型，对于能力相似的个人，提供最优的提分练习路径，减少用户的学习时间成本，猿题库也已经在这方面开始发力了。</li>
+<li>地区考试舆情分析。对于中高考，可以了解地区学生的能力水平和考试情况，做考点预测。百度前段时间发布的大数据高考，在这方面产生极大的影响，效果可能会有一些打折，但是不可否认，这可能会成为一种趋势。</li>
+<li>运用活动数据支撑。由于业务和产品的限制，我们的运营可能更多聚集在内容运营上。如针对用户的期中和期末做运营活动，可以用大数据作为依据，把优质资源作为运营活动的一种方式。</li>
+</ol>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/29/微信朋友圈照片模糊的几点思考/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          微信朋友圈照片模糊的几点思考
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/04/《是什么限制了你的能力》有感/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《是什么限制了你的能力》有感</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="教育行业的大数据思考" data-title="教育行业的大数据思考" data-url="http://pmdog.me/2016/01/25/教育行业的大数据思考/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"micklong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 游龙
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

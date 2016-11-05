@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo在coding上绑定域名 | mcklong的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前段时间，gitcafe被coding收购，表示不在维护新的代码，并且提醒大家尽快把代码迁移到coding上去。刚开始我觉得没有什么，后来发现，这其实影响很大。当我提交新的文章后，在本地查看时，新的文章能显示，但是通过域名去访问，却访问不到新的文章。后来经过一番折腾，也问了一些人，最终确认是由于gitcafe停止维护的原因，这逼得我们不得不做一些调整，把代码迁移到coding中去。中间的步骤我会省">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo在coding上绑定域名">
+<meta property="og:url" content="http://pmdog.me/2016/03/16/hexo在coding上绑定域名/index.html">
+<meta property="og:site_name" content="mcklong的博客">
+<meta property="og:description" content="前段时间，gitcafe被coding收购，表示不在维护新的代码，并且提醒大家尽快把代码迁移到coding上去。刚开始我觉得没有什么，后来发现，这其实影响很大。当我提交新的文章后，在本地查看时，新的文章能显示，但是通过域名去访问，却访问不到新的文章。后来经过一番折腾，也问了一些人，最终确认是由于gitcafe停止维护的原因，这逼得我们不得不做一些调整，把代码迁移到coding中去。中间的步骤我会省">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/coding_ymjx.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/coding_page.png">
+<meta property="og:updated_time" content="2016-05-07T06:45:04.896Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo在coding上绑定域名">
+<meta name="twitter:description" content="前段时间，gitcafe被coding收购，表示不在维护新的代码，并且提醒大家尽快把代码迁移到coding上去。刚开始我觉得没有什么，后来发现，这其实影响很大。当我提交新的文章后，在本地查看时，新的文章能显示，但是通过域名去访问，却访问不到新的文章。后来经过一番折腾，也问了一些人，最终确认是由于gitcafe停止维护的原因，这逼得我们不得不做一些调整，把代码迁移到coding中去。中间的步骤我会省">
+  
+    <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d9de220e2ccd67bd25be8bfb464f8e73";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  
+  
+  <script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">游龙</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/产品">产品</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/共享经济/" style="font-size: 10px;">共享经济</a> <a href="/tags/大数据/" style="font-size: 12.5px;">大数据</a> <a href="/tags/心理学/" style="font-size: 10px;">心理学</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/行为学/" style="font-size: 10px;">行为学</a> <a href="/tags/阅读/" style="font-size: 12.5px;">阅读</a> <a href="/tags/随笔/" style="font-size: 17.5px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">家穷人丑，一米六九，屌丝一枚，逆袭可否</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">游龙</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">游龙</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/产品">产品</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/micklong/micklong.github.io" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/523146456" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/you-long-46" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo在coding上绑定域名" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/16/hexo在coding上绑定域名/" class="article-date">
+  	<time datetime="2016-03-16T07:54:03.000Z" itemprop="datePublished">2016-03-16</time>
+</a>
+    </div>
+  
+  
+   
+    <div class="article-view">
+  <span id="busuanzi_container_page_pv">
+  阅读 <span id="busuanzi_value_page_pv"></span>
+</span>
+  </div>
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo在coding上绑定域名
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间，gitcafe被coding收购，表示不在维护新的代码，并且提醒大家尽快把代码迁移到coding上去。刚开始我觉得没有什么，后来发现，这其实影响很大。当我提交新的文章后，在本地查看时，新的文章能显示，但是通过域名去访问，却访问不到新的文章。后来经过一番折腾，也问了一些人，最终确认是由于gitcafe停止维护的原因，这逼得我们不得不做一些调整，把代码迁移到coding中去。中间的步骤我会省掉一些，如果有不太明白的，可以具体去看我前面写的<a href="http://www.pmdog.me/2015/12/07/hexo%E8%A2%AB%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95%E6%96%B9%E6%B3%95/" target="_blank" rel="external">hexo被百度收录方法</a></p>
+<h2 id="1-根目录下文件_config-yml_,添加一行配置,例如我的文件位置在_/_config-yml_。">1.根目录下文件_config.yml ,添加一行配置,例如我的文件位置在 /_config.yml 。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: https://github.com/micklong/micklong.github.io.git,master</span><br><span class="line">    coding: https://git.coding.net/micklong/micklong.git,master</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2-接下来就是域名部分，把coding的解析线路设成默认的，github设成国外的就好了。记住coding的cname中的解析，要同时设置www和*两项">2.接下来就是域名部分，把coding的解析线路设成默认的，github设成国外的就好了。记住coding的cname中的解析，要同时设置www和*两项</h2><p> <img src="http://7xltqk.com1.z0.glb.clouddn.com/coding_ymjx.png" alt="域名解析"></p>
+<h2 id="3-_设置coding中的page。在上传的项目中，page中设置对应的内容，就可以访问网站了。">3. 设置coding中的page。在上传的项目中，page中设置对应的内容，就可以访问网站了。</h2><p>有人反馈说，不能访问不带WWW的域名，经过这个测试是可以的。</p>
+<p><img src="http://7xltqk.com1.z0.glb.clouddn.com/coding_page.png" alt="page设置"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/12/微信聊天“撤销”功能的几点思考/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          微信聊天“撤销”功能的几点思考
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/25/大数据驱动产品的阶段性思考与总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大数据驱动产品的阶段性思考与总结</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="hexo在coding上绑定域名" data-title="hexo在coding上绑定域名" data-url="http://pmdog.me/2016/03/16/hexo在coding上绑定域名/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"micklong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 游龙
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
