@@ -3,19 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>教育行业的大数据思考 | mcklong的博客</title>
+  <title>基于性别判定APP使用模型 | mcklong的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
+  <meta name="description" content="因为项目需要，公司的产品线发生了变化，需要了解用户的性别分布情况。虽然用户在注册时有填写相应的性别，但是整体还有一定的差异。为了减少这样的差异，需要对用户的性别进行矫正，最终达到准确预测用户性别的目的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="教育行业的大数据思考">
-<meta property="og:url" content="http://pmdog.me/2016/01/25/教育行业的大数据思考/index.html">
+<meta property="og:title" content="基于性别判定APP使用模型">
+<meta property="og:url" content="http://pmdog.me/2017/02/26/基于APP使用的性别判定模型/index.html">
 <meta property="og:site_name" content="mcklong的博客">
-<meta property="og:description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
-<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/bigdata.png">
-<meta property="og:updated_time" content="2016-02-02T06:47:43.459Z">
+<meta property="og:description" content="因为项目需要，公司的产品线发生了变化，需要了解用户的性别分布情况。虽然用户在注册时有填写相应的性别，但是整体还有一定的差异。为了减少这样的差异，需要对用户的性别进行矫正，最终达到准确预测用户性别的目的。">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-01.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-02.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-03.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-04.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-05.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-07.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-08.png">
+<meta property="og:image" content="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-09.png">
+<meta property="og:updated_time" content="2017-06-16T10:47:36.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="教育行业的大数据思考">
-<meta name="twitter:description" content="教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。">
+<meta name="twitter:title" content="基于性别判定APP使用模型">
+<meta name="twitter:description" content="因为项目需要，公司的产品线发生了变化，需要了解用户的性别分布情况。虽然用户在注册时有填写相应的性别，但是整体还有一定的差异。为了减少这样的差异，需要对用户的性别进行矫正，最终达到准确预测用户性别的目的。">
   
     <link rel="alternative" href="/atom.xml" title="mcklong的博客" type="application/atom+xml">
   
@@ -205,11 +212,11 @@ var _hmt = _hmt || [];
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-教育行业的大数据思考" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-基于APP使用的性别判定模型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/25/教育行业的大数据思考/" class="article-date">
-  	<time datetime="2016-01-25T02:54:03.000Z" itemprop="datePublished">2016-01-25</time>
+      <a href="/2017/02/26/基于APP使用的性别判定模型/" class="article-date">
+  	<time datetime="2017-02-26T07:54:03.000Z" itemprop="datePublished">2017-02-26</time>
 </a>
     </div>
   
@@ -231,7 +238,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      教育行业的大数据思考
+      基于性别判定APP使用模型
     </h1>
   
 
@@ -240,7 +247,7 @@ var _hmt = _hmt || [];
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li></ul>
 	</div>
 
         
@@ -251,33 +258,42 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 教育行业最近也开始成为巨头开始发力的领域，特别是K12领域，百度更是特别成立了教育部门，专注K12的研究。由于行业的特殊性，以猿题库的相关业务举例，不代表猿题库相关业务的观点，仅从大数据方面谈下自己的感想。</p>
- <a id="more"></a>
-<p><strong>一、大数据是什么</strong></p>
-<blockquote>
-<p>我理解的大数据指的是基于用户的学习行为产生可以分析的，有价值的数据。用户在我们的产品上产生的数据并不都是有价值的数据，我们需要进行甄别和筛选，找出有意义、有价值的数据，后面用这些数据为我们的业务服务，为决策提供数据支撑。</p>
+        <p>因为项目需要，公司的产品线发生了变化，需要了解用户的性别分布情况。虽然用户在注册时有填写相应的性别，但是整体还有一定的差异。为了减少这样的差异，需要对用户的性别进行矫正，最终达到准确预测用户性别的目的。</p>
+<a id="more"></a>
+<h3 id="一、用户标签系统概述">一、用户标签系统概述</h3><blockquote>
+<p>用户标签系统是用户画像的一部分，利用大数据手段，将一个用户进行标签量化，从而更好地了解用户。从传统的用户画像研究，到现在的数据用户画像研究，这样的好处是可以实时了解用户的变化情况，特别是针对用户行为的刻画，这是传统的调研做不到的。用户画像的分类一般分为<strong>事实标签</strong>、<strong>行为标签</strong>、<strong>预测标签</strong>。</p>
+<ul>
+<li>事实标签主要是用来描述基本事实的标签，主要包括基本人口属性。</li>
+<li>行为标签主要是通过用户使用行为刻画出来的标签，比如说最近七天使用哪些应用，每个应用的使用时长等。</li>
+<li>预测标签也叫模型标签，通过一定的模型和算法，计算出来的标签纸，比如用户的活跃度等等。</li>
+</ul>
 </blockquote>
-<p><strong>二、大数据来源</strong></p>
-<p> <img src="http://7xltqk.com1.z0.glb.clouddn.com/bigdata.png" alt="大数据思维导图"></p>
-<p>从猿题库相关的现有的业务来看，用户产生训练数据主要来自以下几个途径：</p>
-<blockquote>
-<ol>
-<li>各APP的埋点情况。在前期每个App都会有自己独立的埋点行为，通过埋点的数据做数据分析。但目前埋点的情况比较分散，各个模块都有自己的规则，可能存在不全的情况，后期需要重点对这一块进行梳理。</li>
-<li>小猿搜题。目前小猿搜题是整个产品产生数据流量的最大入口，每天都会有将近XX的活跃用户数。用户搜索的难题，收藏的题目等等，这些都可以作为大数据的来源，可以很好地收集到用户的薄弱知识点，了解用户现在的学习进度，所学内容。</li>
-<li>猿辅导。猿辅导的内容接下来将成为的重中之重，将成为公司流量变现的主要路口。现在每天大概有XX的用户数据。课程包的点击量，视频的点击量，学习时长，视频课程评价，视频完成率等，这些可以作为评价视频资源，师资好坏的依据。视频之后配套的练习，收集用户的试题训练情况，试题的收藏情况，来判定用户的能力水平。后期可以利用为用户做针对性的课程推送。</li>
-<li>猿题库（包括教师版）。猿题库开展之后，也将会成为用户数据产生的主要入口。用户刷题的练习情况，收藏情况，做错的试题情况，试卷的练习情况等，后期可以考虑根据用户的整个学习训练情况，建立个人的能力模型，最终为用户提供合适的题，合适的视频。</li>
-</ol>
-</blockquote>
-<p><strong>三、大数据能做什么</strong><br> 当我们收集到用户有价值的数据，那么这些数据能为我们提供些什么。如何发挥大数据的价值，也将是大数据工作的重心。大数据的价值主要分为以下几块：</p>
-<blockquote>
-<ol>
-<li>驱动App迭代开发。用户活跃度和使用粘度是决定产品的成败的关键因素。在迭代开发中，以大数据作为支撑，了解目前的整个App的整个现状和使用情况，了解目前app可能存在的一些问题。用数据验证功能的点击率和转化率，为后面的迭代做数据依据。</li>
-<li>改善现有内容质量问题。通过用户的数据，去改善目前内容现有的一些问题。如通过视频课程的点击量和视频学习完成率，判定视频的好坏情况，视频课程是否枯燥乏味。通过大数据结合用户的实际情况，去量化试题难度，让试题难度更加合理，通过用户点击纠错的反馈的内容，暴露出试题的题干解析问题。对于小题库的，整个试题库应该是动态，应该做到“去其糟粕”，把质量差的试题淘汰掉，保证小题库的质量。</li>
-<li>个性化学习推荐。这个应该是大数据最重要的一个目标，虽然离现在有些遥远。通过学生的搜题，刷题的数据，诊断出用户的薄弱知识点，再根据这些薄弱点做针对性的视频学习和试题进行练习巩固，这是与纸质教辅书和课堂无法做到的。基于大数据,可以建立用户的个人能力模型，对于能力相似的个人，提供最优的提分练习路径，减少用户的学习时间成本，猿题库也已经在这方面开始发力了。</li>
-<li>地区考试舆情分析。对于中高考，可以了解地区学生的能力水平和考试情况，做考点预测。百度前段时间发布的大数据高考，在这方面产生极大的影响，效果可能会有一些打折，但是不可否认，这可能会成为一种趋势。</li>
-<li>运用活动数据支撑。由于业务和产品的限制，我们的运营可能更多聚集在内容运营上。如针对用户的期中和期末做运营活动，可以用大数据作为依据，把优质资源作为运营活动的一种方式。</li>
-</ol>
-</blockquote>
+<p><img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-01.png" alt="用户标签系统定义"></p>
+<p> <strong>一个好的、优秀可靠的数据源，顶得上10个数据模型。</strong><br> <strong>标签分层分类原则</strong>：</p>
+<ul>
+<li>第一，标签的类别并不孤立，互有关联。</li>
+<li>第二，梳理某类别标签的子分类时，尽可能的遵循<strong>MECE原则</strong>（相互独立、完全穷尽），尤其是一些有关用户分类的，要能覆盖所有用户，但又不交叉。</li>
+</ul>
+<p> <strong>标签准确度校验</strong>：</p>
+<ul>
+<li>通过定性方式（电话访谈）对样本进行抽样测试，判定准确度。</li>
+<li>利用用户样本标签库，将样本用户和预测用户进行混合，校验整体召回率</li>
+</ul>
+<p><img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-02.png" alt="用户标签系统搭建流程"></p>
+<h3 id="二、朴素贝叶斯理论">二、朴素贝叶斯理论</h3><p>  朴素贝叶斯理论是机器学习中，最常用的预测常用模型，基本原理就是通过现有事件发生的概率，来预测未知事物发生的概率。具体的运算逻辑就不再赘述了，可以看下面的三个例子。</p>
+<p> <img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-03.png" alt="朴素贝叶斯理论"></p>
+<p>  <img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-04.png" alt="垃圾邮件分类"></p>
+<p>  <img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-05.png" alt="病情预测"></p>
+<h3 id="三、项目实战">三、项目实战</h3><p>筛选出男女各自的代表性APP列表集合</p>
+<ul>
+<li><strong>某些APP的命名以及其功能明显的性别倾向性</strong>，或者说得益于男女之间的差异，我们能够分别为男女各自定义一组APP名的关键词用来区别男女的用户。</li>
+<li>我们要上述集合APP名称的库中的所有的APP名进行模糊匹配，继而找出所有的能够打上性别标签的APP。可以利用ES+lK中文分词进行模糊匹配，也可以用结巴分词进行匹配。</li>
+<li><p>然后再计算发生的概率</p>
+<p><img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-07.png" alt="研究方案"></p>
+</li>
+</ul>
+<p>   <img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-08.png" alt="研究方案"></p>
+<p>   <img src="http://7xltqk.com1.z0.glb.clouddn.com/xbpd-09.png" alt="最终结果"></p>
 
       
     </div>
@@ -287,18 +303,9 @@ var _hmt = _hmt || [];
     
 <nav id="article-nav">
   
-    <a href="/2016/01/29/微信朋友圈照片模糊的几点思考/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          微信朋友圈照片模糊的几点思考
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/04/《是什么限制了你的能力》有感/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《是什么限制了你的能力》有感</div>
+    <a href="/2017/01/13/美的大数据交流心得/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">美的大数据交流心得</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -327,7 +334,7 @@ var _hmt = _hmt || [];
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="教育行业的大数据思考" data-title="教育行业的大数据思考" data-url="http://pmdog.me/2016/01/25/教育行业的大数据思考/"></div>
+	<div class="ds-thread" data-thread-key="基于APP使用的性别判定模型" data-title="基于性别判定APP使用模型" data-url="http://pmdog.me/2017/02/26/基于APP使用的性别判定模型/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
