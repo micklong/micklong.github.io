@@ -205,97 +205,6 @@ var _hmt = _hmt || [];
 </nav>
       <div class="body-wrap">
   
-    <article id="post-四年的十字路口" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/03/四年的十字路口/" class="article-date">
-  	<time datetime="2018-07-03T07:54:03.000Z" itemprop="datePublished">2018-07-03</time>
-</a>
-    </div>
-  
-  
-   
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/四年的十字路口/">四年的十字路口</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>突然发现自己好久没有做总结，把很多好的习惯都丢掉了。这半年有了很多感触，想不到这么快就毕业三年，我不禁问自己，我还是那个毕业时的我，初心是否还在？我毕业时计划，都实现了哪些：</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/07/03/四年的十字路口/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-<script>
-
-(function(){
-
-    var bp = document.createElement('script');
-
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-
-    var s = document.getElementsByTagName("script")[0];
-
-    s.parentNode.insertBefore(bp, s);
-
-})();
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-三年的十字路口" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1076,6 +985,98 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a  href="/2016/04/12/微信聊天“撤销”功能的几点思考/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo在coding上绑定域名" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/16/hexo在coding上绑定域名/" class="article-date">
+  	<time datetime="2016-03-16T07:54:03.000Z" itemprop="datePublished">2016-03-16</time>
+</a>
+    </div>
+  
+  
+   
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/16/hexo在coding上绑定域名/">hexo在coding上绑定域名</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间，gitcafe被coding收购，表示不在维护新的代码，并且提醒大家尽快把代码迁移到coding上去。刚开始我觉得没有什么，后来发现，这其实影响很大。当我提交新的文章后，在本地查看时，新的文章能显示，但是通过域名去访问，却访问不到新的文章。后来经过一番折腾，也问了一些人，最终确认是由于gitcafe停止维护的原因，这逼得我们不得不做一些调整，把代码迁移到coding中去。中间的步骤我会省掉一些，如果有不太明白的，可以具体去看我前面写的<a href="http://www.pmdog.me/2015/12/07/hexo%E8%A2%AB%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95%E6%96%B9%E6%B3%95/">hexo被百度收录方法</a></p>
+<h2 id="1-根目录下文件_config-yml_,添加一行配置,例如我的文件位置在_/_config-yml_。">1.根目录下文件_config.yml ,添加一行配置,例如我的文件位置在 /_config.yml 。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: https://github.com/micklong/micklong.github.io.git,master</span><br><span class="line">    coding: https://git.coding.net/micklong/micklong.git,master</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/16/hexo在coding上绑定域名/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
